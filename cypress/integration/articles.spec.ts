@@ -26,12 +26,9 @@ describe("Articles", () => {
     // put test here
   });
 
-
-
   // USER CREATED TEST FOR TAGS
-  it('should filter tags', () => {
+  it("should filter tags", () => {
     // check that the total number of tags is 20
-
     // find tags search input and type 'anim' in it
     // assert the number of tags returned
     // click on 2nd tag 'animations'
@@ -39,5 +36,5 @@ describe("Articles", () => {
     // assert total tags is 15
     // click on the tag with routing
     // assert there are 3 articles
-  })
+  });
 });

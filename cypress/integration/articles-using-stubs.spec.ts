@@ -1,4 +1,4 @@
-describe("Articles", () => {
+describe("Articles using stubs", () => {
   it("stubbing tests using router", () => {
     cy.server();
     cy.route("/api/articles/recent", []);
@@ -40,9 +40,10 @@ describe("Articles", () => {
     cy.get("app-article").should("have.length", 1);
   });
 
-    // USER CREATED TEST FOR STUBS
-  it('should wait for articles', () => {
+  // USER CREATED TEST FOR STUBS
+  it("should display 2 tags", () => {
     // stub the tags return to only return 'constructor' & 'components'
     // assert that tags count = 2
+    // tag model: {"_id":"58c16f1fe24a2d000471a591","tag":"testing","__v":0}
   });
 });
