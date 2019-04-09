@@ -37,7 +37,6 @@ describe("Articles", () => {
     cy.get('div.tags').should('have.length', 20)
 
     cy.get('.tags-container input').type('anim');
-    // cy.get('.tag-search-button').click();
     cy.get('div.tags').should('have.length', 3)
       .eq(1).click();
     cy.get('div.tags.selected').should('have.length', 1);

@@ -40,8 +40,9 @@ describe("Articles", () => {
     cy.get("app-article").should("have.length", 1);
   });
 
-    // USER CREATED TEST FOR TAGS
-  it('should wait for tags', () => {
-    
+    // USER CREATED TEST FOR STUBS
+  it('should wait for articles', () => {
+    // stub the tags return to only return 'constructor' & 'components'
+    // assert that tags count = 2
   });
 });

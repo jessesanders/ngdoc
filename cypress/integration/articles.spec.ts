@@ -30,15 +30,14 @@ describe("Articles", () => {
 
   // USER CREATED TEST FOR TAGS
   it('should filter tags', () => {
-    
+    // check that the total number of tags is 20
+
     // find tags search input and type 'anim' in it
-   // assert the number of tags returned
-   // click on 2nd tag
-    // 
-    cy.get('div.tags.selected').should('have.length', 1);
-    cy.get('div.tags').should('have.length', 15)
-      .contains('routing').click()
-    cy.get("app-article")
-      .should("have.length", 3);
+    // assert the number of tags returned
+    // click on 2nd tag 'animations'
+    // assert the number of selected tags is 1
+    // assert total tags is 15
+    // click on the tag with routing
+    // assert there are 3 articles
   })
 });
