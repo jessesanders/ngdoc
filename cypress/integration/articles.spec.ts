@@ -36,5 +36,9 @@ describe("Articles", () => {
     // assert total tags is 15
     // click on the tag with routing
     // assert there are 3 articles
+    // BONUS
+    // reset filters, check number of tags and articles
+    // select a tag, assert it's selected
+    // unselect that tag, assert back to default state
   });
 });
