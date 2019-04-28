@@ -22,6 +22,8 @@ describe("Articles", () => {
   });
 
   // USER CREATED TEST
+  // RUN APP WITH "NPM START"
+  // IN A DIFFERENT CONSOLE WINDOW RUN CYPRESS WITH "NPX CYPRESS OPEN"
   it("should search (student version)", () => {
     // put test here
   });
