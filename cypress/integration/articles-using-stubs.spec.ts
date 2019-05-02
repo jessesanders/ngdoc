@@ -41,9 +41,11 @@ describe("Articles using stubs", () => {
   });
 
   // USER CREATED TEST FOR STUBS
+  // stub the tags api call to only return 'constructor' & 'components'
+  // assert that tags count = 2
+  // HINT tag model: {_id: "1", tag:"testing"}
+  // BONUS: select a tag by clicking on it and
+  // have api / articles / search return 1 article
   it("should display 2 tags", () => {
-    // stub the tags return to only return 'constructor' & 'components'
-    // assert that tags count = 2
-    // tag model: {"_id":"58c16f1fe24a2d000471a591","tag":"testing","__v":0}
   });
 });
