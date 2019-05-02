@@ -14,6 +14,8 @@ describe("Articles", () => {
   });
 
   // USER CREATED TEST
+  // RUN APP WITH "NPM START"
+  // IN A DIFFERENT CONSOLE WINDOW RUN CYPRESS WITH "NPX CYPRESS OPEN"
   it("should search (student version)", () => {
     // put test here
   });
@@ -28,5 +30,9 @@ describe("Articles", () => {
     // assert total tags is 15
     // click on the tag with routing
     // assert there are 3 articles
+    // BONUS
+    // reset filters, check number of tags and articles
+    // select a tag, assert it's selected
+    // unselect that tag, assert back to default state
   });
 });
