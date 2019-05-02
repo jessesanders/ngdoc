@@ -66,7 +66,9 @@ export class HomeComponent extends LoadingPage implements OnInit {
       const parms = params['tags'],
         tags = parms ? parms.split(',') : [];
 
-      this.store.dispatch(new ArticleFilterActions.SetTags(tags));
+      if (parms !== undefined) {
+        this.store.dispatch(new ArticleFilterActions.SetTags(tags));
+      }
     });
 
     // navigate when the filter data changes
