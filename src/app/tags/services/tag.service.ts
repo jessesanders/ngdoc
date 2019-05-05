@@ -32,7 +32,7 @@ export class TagService {
           return match.tag.toLocaleLowerCase();
         });
       })
-      )
+      );
   }
 
 }

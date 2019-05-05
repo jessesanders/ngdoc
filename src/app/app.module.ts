@@ -8,7 +8,7 @@ import { RouterModule } from '@angular/router';
 import { StoreModule } from '@ngrx/store';
 import { EffectsModule } from '@ngrx/effects';
 import { StoreDevtoolsModule } from '@ngrx/store-devtools';
-import { HttpClientInMemoryWebApiModule } from "angular-in-memory-web-api";
+import { HttpClientInMemoryWebApiModule } from 'angular-in-memory-web-api';
 
 import { ArticleFilterEffects } from './article-filter/effects/article-filter';
 
@@ -83,7 +83,7 @@ import { InMemoryDataService } from './in-memory-data.service';
     SelectButtonModule,
     CaptchaModule,
     SharedModule,
-    ServiceWorkerModule.register("/ngsw-worker.js", {
+    ServiceWorkerModule.register('/ngsw-worker.js', {
       enabled: environment.production
     }),
     StoreModule.forRoot({

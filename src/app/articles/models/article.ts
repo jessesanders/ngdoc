@@ -41,9 +41,9 @@ export interface IFullArticle {
 }
 
 export let ContentTypes = [
-  { label: "Blog", value: "Blog" },
-  { label: "Video", value: "Video" },
-  { label: "Course", value: "Course" },
-  { label: "Code/Sample/Application", value: "Code" },
-  { label: "Other", value: "Other" }
+  { label: 'Blog', value: 'Blog' },
+  { label: 'Video', value: 'Video' },
+  { label: 'Course', value: 'Course' },
+  { label: 'Code/Sample/Application', value: 'Code' },
+  { label: 'Other', value: 'Other' }
 ];
