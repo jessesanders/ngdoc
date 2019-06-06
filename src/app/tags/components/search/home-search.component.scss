@@ -74,6 +74,7 @@ input[type='radio'] {
   cursor: pointer;
   line-height: 42px;
   text-align: center;
+  // background-color: black;
 }
 
 @include breakpoint($max: $ipad, $min: $mobile) {

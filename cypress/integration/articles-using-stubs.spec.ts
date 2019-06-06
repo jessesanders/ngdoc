@@ -1,3 +1,4 @@
+/// <reference types="@percy/cypress" />
 describe("Articles using stubs", () => {
   it("stubbing tests using router", () => {
     cy.server();
@@ -5,6 +6,9 @@ describe("Articles using stubs", () => {
 
     cy.visit("/");
     cy.get("app-article").should("have.length", 0);
+
+    // Take a snapshot for visual diffing
+    cy.percySnapshot("recent");
   });
 
   it("stubbing tests using router and waiting", () => {
@@ -20,7 +24,7 @@ describe("Articles using stubs", () => {
         author_name: "Kim Maida",
         status: "approved",
         title_lower: "managing state in angular with ngrx/store",
-        title: "Managing State in Angular with ngrx/store",
+        title: "Managing State in Angular with Service with a Subject",
         url:
           "https://auth0.com/blog/managing-state-in-angular-with-ngrx-store/",
         version: "2+",
@@ -38,6 +42,7 @@ describe("Articles using stubs", () => {
     cy.wait(["@articles"]);
 
     cy.get("app-article").should("have.length", 1);
+    cy.percySnapshot("1 article");
   });
 
   // USER CREATED TEST FOR STUBS
@@ -47,5 +52,13 @@ describe("Articles using stubs", () => {
   // BONUS: select a tag by clicking on it and
   // have api / articles / search return 1 article
   it("should display 2 tags", () => {
+    cy.server();
+    cy.route("/api/tags", [
+      { _id: "1", tag: "constructor" },
+      { _id: "2", tag: "components" }
+    ]).as('tags');
+    cy.visit('/')
+    cy.wait('@tags');
+    cy.percySnapshot("2 tags");
   });
 });
