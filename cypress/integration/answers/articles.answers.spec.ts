@@ -1,33 +1,33 @@
 
-describe("Articles", () => {
+describe('Articles', () => {
   beforeEach(() => {
-    cy.visit("/");
+    cy.visit('/');
   });
 
-  it("should load when home page loads", () => {
-    cy.get("app-article").should("have.length.greaterThan", 0);
+  it('should load when home page loads', () => {
+    cy.get('app-article').should('have.length.greaterThan', 0);
   });
 
-  it("should open a new tab when clicked", () => {
-    cy.get("app-article")
+  it('should open a new tab when clicked', () => {
+    cy.get('app-article')
       .eq(2)
-      .children("a")
-      .should("have.attr", "target", "_blank");
+      .children('a')
+      .should('have.attr', 'target', '_blank');
   });
 
-  it("should search", () => {
+  it('should search', () => {
     cy.get('input.search').type('canvas')
     cy.get('.search-button').click();
-    cy.get("app-article")
-      .should("have.length", 1);
+    cy.get('app-article')
+      .should('have.length', 1);
   })
 
   // USER CREATED TEST
-  it("should search (student version)", () => {
+  it('should search (student version)', () => {
     cy.get('input.search').type('validator')
     cy.get('.search-button').click();
-    cy.get("app-article")
-      .should("have.length", 6);
+    cy.get('app-article')
+      .should('have.length', 6);
   })
 
   // USER CREATED TEST FOR TAGS
@@ -42,7 +42,7 @@ describe("Articles", () => {
     cy.get('div.tags.selected').should('have.length', 1);
     cy.get('div.tags').should('have.length', 15)
       .contains('routing').click()
-    cy.get("app-article")
-      .should("have.length", 3);
+    cy.get('app-article')
+      .should('have.length', 3);
   })
 });

@@ -13,30 +13,33 @@ import { articleFilterReducer, AppState } from '../reducers/article-filter';
 
 @Injectable()
 export class ArticleFilterEffects {
-  constructor(private actions: Actions,
-    private store: Store<AppState>) {
-  }
+  constructor(private actions: Actions, private store: Store<AppState>) {}
 
   // switch action to load articles
-  @Effect() changeFilter = this.actions.ofType(
-    ArticleFilterActionTypes.SetVersion,
-    ArticleFilterActionTypes.SetKeywords,
-    ArticleFilterActionTypes.SetFilter,
-    ArticleFilterActionTypes.SetTags,
-    ArticleFilterActionTypes.Reset).pipe(
-    withLatestFrom(this.store, (action, state) => state.articleFilter),
-    map((filter) => {
-      if (this.filterIsDefault(filter)) {
-        return new articleActions.LoadRecentArticles();
-      } else {
-        return new articleActions.SearchArticles(filter);
-      }
-    })
+  @Effect() changeFilter = this.actions
+    .ofType(
+      ArticleFilterActionTypes.SetVersion,
+      ArticleFilterActionTypes.SetKeywords,
+      ArticleFilterActionTypes.SetFilter,
+      ArticleFilterActionTypes.SetTags,
+      ArticleFilterActionTypes.Reset
     )
+    .pipe(
+      withLatestFrom(this.store, (action, state) => state.articleFilter),
+      map(filter => {
+        if (this.filterIsDefault(filter)) {
+          return new articleActions.LoadRecentArticles();
+        } else {
+          return new articleActions.SearchArticles(filter);
+        }
+      })
+    );
 
-    filterIsDefault = (filter) => {
-      return filter.tags.length === 0 &&
-        filter.keywords === '' &&
-        filter.version === '2+';
-    }
+  filterIsDefault = filter => {
+    return (
+      filter.tags.length === 0 &&
+      filter.keywords === '' &&
+      filter.version === '2+'
+    );
+  }
 }
