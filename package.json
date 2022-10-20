@@ -39,7 +39,7 @@
     "express": "^4.13.4",
     "lodash": "^4.17.4",
     "mongodb": "^2.2.24",
-    "mongoose": "^4.8.3",
+    "mongoose": "^4.13.21",
     "morgan": "^1.7.0",
     "passport": "^0.3.2",
     "passport-google-oauth": "^1.0.0",
