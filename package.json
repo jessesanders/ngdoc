@@ -30,7 +30,7 @@
     "@ngrx/store-devtools": "^6.1.0",
     "angular-in-memory-web-api": "^0.8.0",
     "body-parser": "^1.15.0",
-    "convict": "^4.0.2",
+    "convict": "^6.2.4",
     "cookie-parser": "^1.4.1",
     "cookie-session": "^2.0.0-beta.3",
     "core-js": "^2.5.4",
